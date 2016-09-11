@@ -73,4 +73,21 @@ public class UserDao {
 
         return status;
     }
+
+    public static int removeUser(int id){
+        int status = 0;
+
+        try(Connection connection = UserDao.getConnection()){
+
+            PreparedStatement statement = connection.prepareStatement("DELETE FROM user_data where id=?");
+
+            statement.setInt(1, id);
+
+            status = statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return status;
+    }
 }

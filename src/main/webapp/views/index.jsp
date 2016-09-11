@@ -43,8 +43,8 @@
             <td>${u.name}</td>
             <td>${u.sex}</td>
             <td>${u.phoneNumber}</td>
-            <td><a href="?id=${u.id}">Edit</a></td>
-            <td><a href="?id=${u.id}">Delete</a></td>
+            <td><a href="controllers/editUser.jsp?id=${u.id}">Edit</a></td>
+            <td><a href="controllers/deleteUser.jsp?id=${u.id}">Delete</a></td>
         </tr>
     </c:forEach>
 </table>
