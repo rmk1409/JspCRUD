@@ -6,18 +6,18 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:useBean id="user" class="bean.User"></jsp:useBean>
-<jsp:setProperty name="user" property="name" value="${param.userName}"></jsp:setProperty>
-<jsp:setProperty name="user" property="phoneNumber" value="${param.userPhoneNumber}"></jsp:setProperty>
-<jsp:setProperty name="user" property="sex" value="${param.userSex}"></jsp:setProperty>
+<jsp:useBean id="user" class="bean.User"/>
+<jsp:setProperty name="user" property="name" value="${param.userName}"/>
+<jsp:setProperty name="user" property="phoneNumber" value="${param.userPhoneNumber}"/>
+<jsp:setProperty name="user" property="sex" value="${param.userSex}"/>
 
 <%
     int status = UserDao.addUser(user);
 
     String msg;
-    if (status>0){
+    if (status > 0) {
         msg = "Added successfully!";
-    }else {
+    } else {
         msg = "An error occured!";
     }
 

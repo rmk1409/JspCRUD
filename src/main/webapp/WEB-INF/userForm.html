@@ -3,11 +3,12 @@
     <table>
         <tr>
             <td>Name:</td>
-            <td><input type="" name="userName" required></td>
+            <td><input type="text" name="userName" required></td>
         </tr>
         <tr>
             <td>Phone number:</td>
-            <td><input placeholder="+X(XXX)XXX-XX-XX" type="tel" pattern='[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}' name="userPhoneNumber"
+            <td><input placeholder="+X(XXX)XXX-XX-XX" type="tel" pattern='[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}'
+                       name="userPhoneNumber"
                        required></td>
         </tr>
         <tr>
@@ -19,6 +20,8 @@
                 </select>
             </td>
         </tr>
-        <tr><td colspan="2"><input type="submit" value="Add new user"></td></tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Add new user"></td>
+        </tr>
     </table>
 </form>

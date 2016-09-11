@@ -18,7 +18,7 @@
 
 <%
     String msg = (String) request.getSession().getAttribute("msg");
-    if (msg != null){
+    if (msg != null) {
         out.print(String.format("<p>%s</p>", msg));
         request.getSession().removeAttribute("msg");
     }
@@ -43,7 +43,7 @@
             <td>${u.name}</td>
             <td>${u.sex}</td>
             <td>${u.phoneNumber}</td>
-            <td><a href="controllers/editUser.jsp?id=${u.id}">Edit</a></td>
+            <td><a href="views/editForm.jsp?id=${u.id}">Edit</a></td>
             <td><a href="controllers/deleteUser.jsp?id=${u.id}">Delete</a></td>
         </tr>
     </c:forEach>
